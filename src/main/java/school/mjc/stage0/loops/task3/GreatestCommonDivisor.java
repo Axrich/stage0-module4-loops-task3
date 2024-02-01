@@ -1,22 +1,19 @@
 package school.mjc.stage0.loops.task3;
 
 public class GreatestCommonDivisor {
+    int temporaryVariable = 0;
     public void printGCD(int first, int second) {
-        int gcd = calculateGCD(first, second);
-        System.out.println(gcd);
-    }
-
-    private int calculateGCD(int a, int b) {
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
+        if (first == 0 || second == 0) {
+            System.out.println(second);
+        } else if (first < second) {
+            temporaryVariable = first;
+            first = second;
+            second = temporaryVariable;
+            printGCD(first % second, second);
+        } else if (first % second == 0) {
+            System.out.println(second);
+        } else {
+            printGCD(second, first % second);
         }
-        return Math.abs(a);
-    }
-
-    public static void main(String[] args) {
-        GreatestCommonDivisor gcdCalculator = new GreatestCommonDivisor();
-        gcdCalculator.printGCD(30, 25); // Example values, replace with your own
     }
 }

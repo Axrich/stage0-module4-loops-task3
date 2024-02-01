@@ -1,20 +1,18 @@
 package school.mjc.stage0.loops.task3;
 
 public class FibonacciSeries {
-    public void printFibonacciPrintsFirstThree() {
-        int firstTerm = 0;
-        int secondTerm = 1;
+    int numberOne = 1;
+    int numberTwo = 1;
+    int numberThree = 0;
+    int getSumNumbersOneAndTwo;
 
-        for (int i = 0; i < 3; i++) {
-            System.out.println(firstTerm);
-            int nextTerm = firstTerm + secondTerm;
-            firstTerm = secondTerm;
-            secondTerm = nextTerm;
+    public void printFibonacci(int lastFibonacci) {
+        System.out.print(numberThree + " " + numberOne + " " + numberTwo + " ");
+        for (int i = 4; i <= lastFibonacci; i++) {
+            getSumNumbersOneAndTwo = numberOne + numberTwo;
+            System.out.print(getSumNumbersOneAndTwo + " ");
+            numberOne = numberTwo;
+            numberTwo = getSumNumbersOneAndTwo;
         }
-    }
-
-    public static void main(String[] args) {
-        FibonacciSeries fibonacciSeries = new FibonacciSeries();
-        fibonacciSeries.printFibonacciPrintsFirstThree();
     }
 }
