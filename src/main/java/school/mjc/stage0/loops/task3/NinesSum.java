@@ -1,7 +1,7 @@
 package school.mjc.stage0.loops.task3;
 
 public class NinesSum {
-    public void calculateSum(int lengthOfLastNumber) {
+    public void calculateSumForRow(int lengthOfLastNumber) {
         long sum = 0;
         long currentNumber = 9;
 
@@ -10,12 +10,11 @@ public class NinesSum {
             currentNumber = currentNumber * 10 + 9;
         }
 
-        System.out.println("Sum of the series is: " + sum);
+        System.out.println(sum);
     }
 
     public static void main(String[] args) {
-
         NinesSum ninesSumCalculator = new NinesSum();
-        ninesSumCalculator.calculateSum(4);
+        ninesSumCalculator.calculateSumForRow(5); // Replace 5 with the desired length of the last number
     }
 }

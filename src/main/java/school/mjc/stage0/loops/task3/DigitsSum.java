@@ -3,7 +3,7 @@ package school.mjc.stage0.loops.task3;
 public class DigitsSum {
     public void printDigitsSum(int number) {
         int sum = calculateDigitsSum(number);
-        System.out.println("Sum of digits in " + number + " is: " + sum);
+        System.out.println(sum);
     }
 
     private int calculateDigitsSum(int number) {
@@ -19,6 +19,6 @@ public class DigitsSum {
 
     public static void main(String[] args) {
         DigitsSum digitsSumCalculator = new DigitsSum();
-        digitsSumCalculator.printDigitsSum(66342);
+        digitsSumCalculator.printDigitsSum(243581); // Example value, replace with your own
     }
 }

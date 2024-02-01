@@ -2,8 +2,8 @@ package school.mjc.stage0.loops.task3;
 
 public class GreatestCommonDivisor {
     public void printGCD(int first, int second) {
-        int god = calculateGCD(first, second);
-        System.out.println("GCD of " + first + " and " + second + " is: " + god);
+        int gcd = calculateGCD(first, second);
+        System.out.println(gcd);
     }
 
     private int calculateGCD(int a, int b) {
@@ -14,8 +14,9 @@ public class GreatestCommonDivisor {
         }
         return Math.abs(a);
     }
+
     public static void main(String[] args) {
         GreatestCommonDivisor gcdCalculator = new GreatestCommonDivisor();
-        gcdCalculator.printGCD(12, 634);
+        gcdCalculator.printGCD(30, 25); // Example values, replace with your own
     }
 }
